@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="prototype_CreatingRequest" datatype="html">
+        <source>You are creating request for <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>PROTOTYPE-BUILD<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_ProductDetails" datatype="html">
+        <source>PRODUCT DETAILS</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_OPCO" datatype="html">
+        <source>OPCO-1</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_Refrigeration" datatype="html">
+        <source>REFRIGERATION</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_SelectProduct" datatype="html">
+        <source>Select product</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_Quantity of Samples" datatype="html">
+        <source>Quantity of Samples</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_QuantityRequired" datatype="html">
+        <source>Quantity is required.</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_ProductDescription" datatype="html">
+        <source>Brief about the Prototype Build</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_UploadRequiredDocs" datatype="html">
+        <source>UPLOAD REQUIRED DOCUMENTS</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_ValidFileExtensions" datatype="html">
+        <source>Valid file extensions doc,img,cad,iges,pdf,stl,x3d,dxf</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_CategoryOfDocument" datatype="html">
+        <source>CATEGORY OF DOCUMENT</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_FileName" datatype="html">
+        <source>FILE NAME</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_Progress" datatype="html">
+        <source>PROGRESS</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_Browse" datatype="html">
+        <source>
+                                              Browse &amp; Upload
+                                          </source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_UploadApprovedDocs" datatype="html">
+        <source>UPLOAD APPROVED DOCUMENTS</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_ApprovedFileExtensions" datatype="html">
+        <source>Valid file extensions - .msg</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_ApprovedFileName" datatype="html">
+        <source>FILE NAME</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_ApprovedProgress" datatype="html">
+        <source>PROGRESS</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_ApprovedBrowse" datatype="html">
+        <source>
+                                                Browse &amp; Upload
+                                          </source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">115</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_Specialinstruction" datatype="html">
+        <source>Special Instructions</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">134</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_ApprovedNext" datatype="html">
+        <source>NEXT</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">137</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_Notify" datatype="html">
+        <source>NOTIFY</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">144</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_NotifierEmail" datatype="html">
+        <source>EMAIL ID</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">154</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_NotifierFirstName" datatype="html">
+        <source>FIRST NAME</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">155</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_NotifierLastName" datatype="html">
+        <source>LAST NAME</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">156</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_NotifierNext" datatype="html">
+        <source>NEXT</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">176</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_ScheduleAssistant" datatype="html">
+        <source>SCHEDULE ASSISTANT</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">184</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_StartDate" datatype="html">
+        <source>Start Date:</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">191</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_EndDate" datatype="html">
+        <source>End Date:</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">196</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_BookedDates" datatype="html">
+        <source>
+                                    <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Check Calendar for Booked Dates<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">204</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_SelectedDates" datatype="html">
+        <source>You have selected dates from <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="{{fromDate | date:&quot;dd-MMM-yyyy&quot;}}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> to <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION_1" equiv-text="{{toDate|date:&quot;dd-MMM-yyyy&quot;}}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">211</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_AvailabilityCheck" datatype="html">
+        <source>Availability of the date needs to be checked from Lab Admin upon Submission of Request</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">212</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_InvalidProduct" datatype="html">
+        <source>Please select a Product</source><target>france-language</target>
+        <target>paamadsds lsmdsldas sala</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">228</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_InvalidQuantity" datatype="html">
+        <source>Please enter Quantity greater than 0</source><target>france-language</target><target>france-language</target>
+        <target>paamadsds Quccantity sala</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">229</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_AlertProductDescription" datatype="html">
+        <source>Please brief about the Prototype Build</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">230</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_AlertSelectNotifier" datatype="html">
+        <source>Please add atlest one user to  notify</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">231</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_AlertEnterProperValues" datatype="html">
+        <source>Please enter proper values</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">232</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_AlertRequestRaised" datatype="html">
+        <source>Prototype Build request has been raised successfully</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">233</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_AlertInvalidFileExtension" datatype="html">
+        <source>File extension doesn&apos;t match with the specified file extensions</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">234</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_InProgress" datatype="html">
+        <source>In-Progress</source><target>france-language</target>
+        <target>fdsfasd</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">235</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_Completed" datatype="html">
+        <source>Completed</source><target>france-language</target>
+        <target>pakdd</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">236</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_AlertEmailExists" datatype="html">
+        <source>Email id already added to notify users list</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">237</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prototype_AlertInvalidEmail" datatype="html">
+        <source>Invalid Email-Id</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/prototype/prototype.component.ts</context>
+          <context context-type="linenumber">238</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login_WelcomeTo" datatype="html">
+        <source>Welcome to</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/login/login.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login_RasingARequest" datatype="html">
+        <source>RAISING A REQUEST</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/login/login.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login_RasingARequest_Info" datatype="html">
+        <source>Lab Requestor and Executive can Raise a Request for Prototype, Testing and Certifications</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/login/login.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login_ViewStatus" datatype="html">
+        <source>VIEW STATUS</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/login/login.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login_ViewStatus_Info" datatype="html">
+        <source> Admin can Approve or Reject the requests Lab requestor and Global Executive can view the Status of the request</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/login/login.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login_GenerateReports" datatype="html">
+        <source>GENERATE REPORTS</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/login/login.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login_GenerateReports_Info" datatype="html">
+        <source>Global Executive can view the Report Matrix for the Prototype,Testing &amp; Certifications enabled for the facility</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/login/login.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login_Login" datatype="html">
+        <source>Login</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/login/login.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login_UserEmailID" datatype="html">
+        <source>username</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/login/login.component.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login_EnterEmaiID" datatype="html">
+        <source>Please enter EmailID.</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/login/login.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login_Password" datatype="html">
+        <source>password</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/login/login.component.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login_EnterPassword" datatype="html">
+        <source>Please enter Password.</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/login/login.component.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login_Submit" datatype="html">
+        <source>SUBMIT</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/login/login.component.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login_ProblemSigningIn" datatype="html">
+        <source> Problem Signing In ?</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/login/login.component.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="requestLab_HelloUser" datatype="html">
+        <source>Hello User, Create your Request Lab for..</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/request-lab/request-lab.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="requestLab_Pototype" datatype="html">
+        <source>PROTOTYPE</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/request-lab/request-lab.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="requestLab_Testing" datatype="html">
+        <source>TESTING</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/request-lab/request-lab.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="requestLab_Certifications" datatype="html">
+        <source>CERTIFICATIONS</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/request-lab/request-lab.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="requestLab_LikeTo" datatype="html">
+        <source>would you like to.. </source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/request-lab/request-lab.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="requestLab_Quotation" datatype="html">
+        <source>REQUEST FOR QUOTATION</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/request-lab/request-lab.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="requestLab_BuildPrototype" datatype="html">
+        <source>BUILD A PROTOTYPE</source><target>france-language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/request-lab/request-lab.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

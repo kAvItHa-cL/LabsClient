@@ -1,0 +1,53 @@
+<ngx-flash-messages></ngx-flash-messages>
+<div class="inner_main_agile_section">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-7 col-sm-6 " style="background: #fff;">
+              <h3 class="text-center catagory_color" style="margin-top: 5em;" i18n="@@login_WelcomeTo">Welcome to</h3>
+              <div class="row text-center"><img src="assets/images/DoverLabsLogo.png" ></div>
+              <div class="row infobuttongrp" >
+                  <div class="col-md-4 login_left" id="div1" style="border-right: 1px solid #fff;">
+                      <button class="info_btn" i18n="@@login_RasingARequest">RAISING A REQUEST</button>
+                      <div id="hover-content1"  class="tool1">
+                          <p i18n="@@login_RasingARequest_Info">Lab Requestor and Executive can Raise a Request for Prototype, Testing and Certifications</p>
+                      </div>
+                  </div>
+
+                  <div class="col-md-4 login_left" id="div2" style="border-right: 1px solid #fff;">
+                      <button class="info_btn" i18n="@@login_ViewStatus">VIEW STATUS</button>
+                      <div id="hover-content2" class="tool1">
+                        <p i18n="@@login_ViewStatus_Info"> Admin can Approve or Reject the requests Lab requestor and Global Executive can view the Status of the request</p>
+                      </div>
+                  </div>
+                  <div class="col-md-4 login_left" id="div3">
+                      <button class="info_btn" i18n="@@login_GenerateReports">GENERATE REPORTS</button>
+                      <div id="hover-content3" class="tool1">
+                          <p i18n="@@login_GenerateReports_Info">Global Executive can view the Report Matrix for the Prototype,Testing & Certifications enabled for the facility</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <form [formGroup]="formLogin" (ngSubmit) = "submitLoginDetails(formLogin.value)" >
+          <div class="col-md-5 login_form col-sm-6">
+              <div class="row">
+                  <h2 class="pull-left" style="margin-left:1em; margin-top: 1em;" i18n="@@login_Login">Login</h2>
+              </div>
+              <div class="col-md-7">
+                  <div class="text-center">
+                      <input type="text" class="loginfield form-control " formControlName="emailID" name="EmailID" placeholder="username" i18n-placeholder="@@login_UserEmailID">
+                      <input type="password" class="loginfield form-control" formControlName="password" name="password" placeholder="password" i18n-placeholder="@@login_Password">
+                      <button id="textButton" class="btn-login"  i18n="@@login_Submit">SUBMIT</button>
+
+                      <p><a href="" style="color: #fff; font-size: 14px; " i18n="@@login_ProblemSigningIn"> Problem Signing In ?</a></p>
+                  </div>
+              </div>
+          </div>
+        </form>
+      </div>
+  </div>
+</div>
+<div style="display: none">
+    <p id="InvalidUser" i18n="@@login_InvalidUser">Invalid User</p>
+    <p id="EnterPassword" i18n="@@login_AlertEnterPassword">Please enter Password</p>
+    <p id="EnterEmailId" i18n="@@login_AlertEnterEmail">Please enter EmailID.</p>
+</div>

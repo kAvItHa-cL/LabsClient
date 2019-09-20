@@ -1,0 +1,20 @@
+<app-nav-bar></app-nav-bar>
+<div class="inner_main_agile_section">
+  <div class="container">
+      <div class="row text-center">
+          
+          <h4 class="catagory_color" style=" margin-top: 1em; margin-bottom: 1em;" i18n="@@requestLab_HelloUser">Hello User, Create your Request Lab for..</h4>
+          <a class="btn btn-home1" (click)="show = !show" i18n="@@requestLab_Pototype">PROTOTYPE</a>
+          <div class="btn btn-home1" (click)="show = false" [routerLink]="['/product-category']" i18n="@@requestLab_Testing">TESTING</div>
+          <div class="btn btn-home1" (click)="show = false" i18n="@@requestLab_Certifications">CERTIFICATIONS</div>
+      </div>
+
+     
+      <div *ngIf="show" class="row text-center">
+          <h4 class="catagory_color" style=" margin-top: 1em; margin-bottom: 1em;" i18n="@@requestLab_LikeTo">would you like to.. </h4>
+        <a class="btn btn-homeSub" i18n="@@requestLab_Quotation">REQUEST FOR QUOTATION</a>
+        <div class="btn btn-homeSub" [routerLink]="['/prototype']" i18n="@@requestLab_BuildPrototype">BUILD A PROTOTYPE</div>
+       
+     </div>
+ </div>
+</div>

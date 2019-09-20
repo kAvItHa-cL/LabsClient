@@ -1,0 +1,8 @@
+<app-nav-bar></app-nav-bar>
+<div class="inner_main_agile_section">
+  <div class="container">
+      <div class="row text-center">          
+        <h4 class="catagory_color" style=" margin-top: 1em; margin-bottom: 1em;" >Hello User,<br/><br/> Please select Services Offered<br/></h4>
+        <div class="btn btn-home1" *ngFor = "let item of objProductCategoryList" [routerLink]="['/product-catalog', item.id]">{{item.description}}</div>
+      </div>     
+ </div>

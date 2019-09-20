@@ -1,0 +1,270 @@
+<app-nav-bar></app-nav-bar>
+<ngx-flash-messages></ngx-flash-messages>
+<div class="inner_main_agile_section">
+    <div class="container" style="background: #fff; padding: 1em;">
+        <h4 class="heading" i18n="@@prototype_CreatingRequest">You are creating request for
+            <span class="catagory_color">PROTOTYPE-BUILD</span>
+        </h4>
+        <form [formGroup]="formPrototypeDetails" (ngSubmit)="submitPrototypeDetails(formPrototypeDetails.value)">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapsePrototypeDetails">
+                        <h4 class="panel-title">
+                            <a class="catagory_color" style="color: #4f8fca" data-toggle="collapse" data-parent="#accordion" href="#collapsePrototypeDetails"
+                                i18n="@@prototype_ProductDetails">PRODUCT DETAILS</a>
+                            <i class="fa fa-angle-up" style="float:right;color: #4f8fca"></i>
+                        </h4>
+                    </div>
+                    <div id="collapsePrototypeDetails" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-12 col-xs-12 label1">
+                                    <h4 class=" form-group" style="font-size: 96%;" i18n="@@prototype_OPCO">OPCO-1</h4>
+                                </div>
+                                <div class="col-md-3 col-sm-12 col-xs-12 label2">
+                                    <h4 class="form-group" style="font-size: 96%;" i18n="@@prototype_Refrigeration">REFRIGERATION</h4>
+
+                                </div>
+                                <div class="col-md-3 col-sm-12 col-xs-12">
+                                    <div class="dropdown form-group">
+                                        <select formControlName="productID" style="border: none;border-bottom: 1px solid lightgrey;background: none;">
+                                            <option value="" i18n="@@prototype_SelectProduct">Select product</option>
+                                            <option *ngFor="let item of objProductList" value={{item.id}}>{{item.title}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-12 col-xs-12 quantity">
+                                    <input type="number" min="1" formControlName="quantity" style="color: #000;" placeholder="Quantity of Samples" i18n-placeholder="@@prototype_Quantity of Samples">
+                                </div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <p i18n="@@prototype_ProductDescription">Brief about the Prototype Build</p>
+                                    <textarea class="form-group sizebox" formControlName="description"></textarea>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <h4 style="color: #162B50;font-weight: 600; font-size: 96%; margin-top: 2%; margin-bottom: 1%;" i18n="@@prototype_UploadRequiredDocs">UPLOAD REQUIRED DOCUMENTS</h4>
+                                    <p i18n="@@prototype_ValidFileExtensions">Valid file extensions doc,img,cad,iges,pdf,stl,x3d,dxf</p>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th i18n="@@prototype_CategoryOfDocument">CATEGORY OF DOCUMENT</th>
+                                                    <th></th>
+                                                    <th i18n="@@prototype_FileName">FILE NAME</th>
+                                                    <th i18n="@@prototype_Progress">PROGRESS</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tr *ngFor="let item of objDocumentModelList;let i = index;">
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <select id="documentCategory{{i}}" (change)="selectDocumentCategory($event,i)" style="border: none;border-bottom: 1px solid lightgrey;background: none;">
+                                                            <option *ngFor="let item of objDocumentTypeList" value={{item.id}}>{{item.description}}</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <label for="file-upload{{i}}" class="custom-file-upload" i18n="@@prototype_Browse">
+                                                        Browse & Upload
+                                                    </label>
+                                                    <input id="file-upload{{i}}" type="file" accept=".doc,.img,.cad,.iges,.pdf,.stl,.x3d,.dxf" (change)="attachFile($event,i)"
+                                                    />
+                                                </td>
+                                                <td>
+                                                    <label>{{item.description}}</label>
+                                                </td>
+                                                <td>
+                                                    <label style="color: green">{{item.uploadStatus}}</label>
+                                                </td>
+                                                <td>
+                                                    <i class="fa fa-trash" style="zoom: 1.7" aria-hidden="true" (click)="deleteFileUploadRow(i)"></i>
+                                                </td>
+                                                <td>
+                                                    <i class="fa fa-plus-square" style="zoom: 1.7" aria-hidden="true" (click)="addFileUploadRow(i)"></i>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>                                    
+                                </div>
+                                <input data-toggle="collapse" data-parent="#accordion" href="#collapseUploadApproveddocuments" type="button" class="btn-home"
+                                        style="width: 100px" i18n="@@prototype_ProductNext" value="NEXT">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseUploadApproveddocuments">
+                        <h4 class="panel-title">
+                            <a class="catagory_color" style="color: #4f8fca" data-toggle="collapse" data-parent="#accordion" href="#collapseUploadApproveddocuments"
+                                i18n="@@prototype_UploadApprovedDocs">UPLOAD APPROVED DOCUMENTS</a>
+                            <i class="fa fa-angle-down" style="float:right;color: #4f8fca"></i>
+                        </h4>
+                    </div>
+                    <div id="collapseUploadApproveddocuments" class="panel-collapse collapse">
+                        <div class="panel-body" style="overflow: scroll;">
+                            <div class="row">
+                                <div class="col-md-12 col-xs-12 col-sm-12">
+                                    <p class="form-group" i18n="@@prototype_ApprovedFileExtensions">Valid file extensions - .msg</p>
+
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th i18n="@@prototype_ApprovedFileName">FILE NAME</th>
+                                                    <th i18n="@@prototype_ApprovedProgress">PROGRESS</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tr *ngFor="let item of objApprovedDocumentModelList;let i = index;">
+                                                <td class="">
+                                                    <label for="Approvedfile-upload{{i}}" class="custom-file-upload" i18n="@@prototype_ApprovedBrowse">
+                                                        Browse & Upload
+                                                    </label>
+                                                    <input id="Approvedfile-upload{{i}}" type="file" accept=".msg" (change)="attachApprovedFile($event,i,UploadApprovedDoc)"
+                                                    />
+                                                </td>
+                                                <td>
+                                                    <label>{{item.description}}</label>
+                                                </td>
+                                                <td>
+                                                    <label style="color: green">{{item.uploadStatus}}</label>
+                                                </td>
+                                                <td>
+                                                    <i class="fa fa-trash" style="zoom: 1.7" aria-hidden="true" (click)="deleteApprovedFileUploadRow(i)"></i>
+                                                </td>
+                                                <td>
+                                                    <i class="fa fa-plus-square" style="zoom: 1.7" aria-hidden="true" (click)="addApprovedFileUploadRow(i)"></i>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-xs-12 col-sm-12 ">
+                                    <h4 style="margin-bottom: 10px;" i18n="@@prototype_Specialinstruction">Special Instructions</h4>
+                                    <textarea class="form-group sizebox" formControlName="specialInstruction"></textarea>
+                                </div>
+                                <input data-toggle="collapse" data-parent="#accordion" href="#collapseNotify" type="button" style="width: 100px" class="btn-home"
+                                    i18n="@@prototype_ApprovedNext" value="NEXT">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseNotify">
+                        <h4 class="panel-title">
+                            <a class="catagory_color" style="color: #4f8fca" data-toggle="collapse" data-parent="#accordion" href="#collapseNotify" i18n="@@prototype_Notify">NOTIFY</a>
+                            <i class="fa fa-angle-down" style="float:right;color: #4f8fca"></i>
+                        </h4>
+                    </div>
+                    <div id="collapseNotify" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th i18n="@@prototype_NotifierEmail">EMAIL ID</th>
+                                                <th i18n="@@prototype_NotifierFirstName">FIRST NAME</th>
+                                                <th i18n="@@prototype_NotifierLastName">LAST NAME</th>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tr *ngFor="let item of objNotifyUserModelList;let i = index;">
+                                            <td class="">
+                                                <input type="Email" name="email" (blur)="searchUserByEmail($event,i)" style=" border: none;border-bottom: 1px solid #e0d5d5;"
+                                                />
+                                            </td>
+                                            <td>
+                                                <input type="text" name="fname" [value]=item.firstName disabled style=" border: none;border-bottom: 1px solid #e0d5d5;" />
+                                            </td>
+                                            <td>
+                                                <input type="text" name="lname" [value]=item.lastName disabled style=" border: none;border-bottom: 1px solid #e0d5d5;" />
+                                            </td>
+                                            <td>
+                                                <i class="fa fa-trash" style="zoom: 1.7" aria-hidden="true" (click)="deleteNotifyUserRow(i)"></i>
+                                            </td>
+                                            <td>
+                                                <i class="fa fa-plus-square" style="zoom: 1.7" aria-hidden="true" (click)="addNotifyUserRow(i)"></i>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <button class="btn-home " data-toggle="collapse" data-parent="#accordion" href="#collapseSheduleAssistant" onclick="setDatepicker();"
+                                    style="width: 100px" i18n="@@prototype_NotifierNext">NEXT</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseSheduleAssistant" onclick="setDatepicker();">
+                        <h4 class="panel-title">
+                            <a class="catagory_color" style="color: #4f8fca" data-toggle="collapse" data-parent="#accordion" href="#collapseSheduleAssistant"
+                                onclick="setDatepicker();" i18n="@@prototype_ScheduleAssistant">SCHEDULE ASSISTANT</a>
+                            <i class="fa fa-angle-down" style="float:right;color: #4f8fca"></i>
+                        </h4>
+                    </div>
+                    <div id="collapseSheduleAssistant" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h4 i18n="@@prototype_StartDate" style="font-size: 97%;font-weight: 600">Start Date:</h4>
+                                    <input id="scheduledStartDate" formControlName="scheduledStartDate" (blur)="setScheduledStartDate($event)" style="border: none;border-bottom: 1px solid #e0d5d5;"
+                                    />
+                                </div>
+
+                                <div class="col-md-3">
+                                    <h4 i18n="@@prototype_EndDate" style="font-size: 97%;font-weight: 600">End Date:</h4>
+                                    <input id="scheduledEndDate" formControlName="scheduledEndDate" (blur)="setScheduledEndDate($event)" style="border: none;border-bottom: 1px solid #e0d5d5;"
+                                    />
+                                </div>
+                                <div class="col-md-3">
+                                    <div>&nbsp;</div>
+                                    <div id="blockedDates" hidden>{{blockedDates}}</div>
+                                    <div>
+                                        <span id="selectedDates" style="width:0%;"></span>
+                                        <button id="btnModal" type="button" class="btn btn-link" i18n="@@prototype_BookedDates">
+                                            <strong>Check Calendar for Booked Dates</strong>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: 2em;">
+                                <h4 class="text-center" style="color: #4384EA;" i18n="@@prototype_SelectedDates">You have selected dates from
+                                    <strong>{{fromDate | date:"dd-MMM-yyyy"}}</strong> to
+                                    <strong>{{toDate|date:"dd-MMM-yyyy"}}</strong>
+                                </h4>
+                                <h4 class="text-center" style="color: #4384EA;" i18n="@@prototype_AvailabilityCheck">Availability of the date needs to be checked from Lab Admin upon Submission of Request</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" class="btn-home" style="padding:12px; margin-top: 10px;" i18n="@@prototype_SubmitRequest" value="SUBMIT REQUEST TO LAB ADMIN"
+            />
+            <div>
+            </div>
+        </form>
+    </div>
+    <div class="clearfix"> </div>
+</div>
+<div style="display: none">
+    <p id="SelectProduct" i18n="@@prototype_InvalidProduct">Please select a Product</p>
+    <p id="EnterQuantity" i18n="@@prototype_InvalidQuantity">Please enter Quantity greater than 0</p>
+    <p id="EnterProductDescription" i18n="@@prototype_AlertProductDescription">Please brief about the Prototype Build</p>
+    <p id="SelectNotifier" i18n="@@prototype_AlertSelectNotifier">Please add atleast one user to notify</p>
+    <p id="EnterProperValues" i18n="@@prototype_AlertEnterProperValues">Please enter proper values</p>
+    <p id="RequestRaised" i18n="@@prototype_AlertRequestRaised">Prototype Build request has been raised successfully</p>
+    <p id="InvalidFileExtension" i18n="@@prototype_AlertInvalidFileExtension">File extension doesn't match with the specified file extensions</p>
+    <p id="InProgress" i18n="@@prototype_InProgress">In-Progress</p>
+    <p id="Completed" i18n="@@prototype_Completed">Completed</p>
+    <p id="EmailExists" i18n="@@prototype_AlertEmailExists">Email id already added to notify users list</p>
+    <p id="InvalidEmail" i18n="@@prototype_AlertInvalidEmail">Invalid Email-Id</p>
+</div>

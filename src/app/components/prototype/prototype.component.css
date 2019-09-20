@@ -1,0 +1,10 @@
+.error {
+    color: red;
+  }
+  .error-msg {
+    color: red;
+    display: block;
+    position: absolute;
+    font-size: 75%;
+    bottom: -2em;
+  }

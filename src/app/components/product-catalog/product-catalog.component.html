@@ -1,0 +1,70 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+    <div class="row">
+        <ul class="nav nav-tabs tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="test-tab" onclick="onClickTest();" data-toggle="tab" href="#test" role="tab" aria-controls="test" aria-selected="true">TEST</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">3D PRINT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">3D SCAN</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="tab-content">
+    <!--  <div class="container-outer"> -->
+    <div class="container">
+        <div class="tab-pane fade show active" id="test" role="tabpanel" aria-labelledby="test-tab">
+            <!-- <div class="container-inner"> -->
+            <div class="row">
+                <p id="productCount" hidden >{{productCount}}</p>
+                <p id="testClickCount" hidden>{{testClickCount}}</p>
+                <div class="col-md-4 box_container" *ngFor="let item of objProductCatalogList; let i = index;">
+                    <div class="col-md-12 col-sm-12 box1" style="width:310px" (click)='routing(1)'>
+                        <h3>{{item.product.title}}</h3>
+                        <div class="banner-silder" id="home" style="height: 215px; width: 100%;">
+                            <!-- <center style="color: black;"> </center> -->
+                            <div id="JiSlider{{i}}" class="jislider" style="max-height:217px">
+                                <ul>                                   
+                                    <li>
+                                        <div class="w3layouts-banner-top w3layouts-banner-top1">
+                                            <div class="container">
+                                                <div class="agileits-banner-info">
+                                                    <div class="more">
+                                                        <!-- <a href="#" class="hvr-shutter-in-vertical" data-toggle="modal" data-target="#myModal">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="w3layouts-banner-top w3layouts-banner-top2">
+                                            <div class="container">
+                                                <div class="agileits-banner-info">
+                                                    <div class="more">
+                                                        <!-- <a href="#" class="hvr-shutter-in-vertical" data-toggle="modal" data-target="#myModal">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="text-content">
+                            <p style="text-align: justify;">{{item.product.shortDescription}}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 card_button">
+                        <a routerLink="/requestLab"  class="btn btn-primary">Book</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"></div>
+    <div class="tab-pane fade" id="messages" role="tabpanel" aria-labelledby="messages-tab"></div>
+</div>

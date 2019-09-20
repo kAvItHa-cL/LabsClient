@@ -1,14 +1,183 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>DoverLabsClient</title>
-  <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<head>
+    <title>DOVER LAB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="BAHUMUKHI" />
+    <script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+    function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+
+    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/linecons.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/animate.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,900,700,700italic,400italic,300italic,300,100italic,100,900italic'
+        rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Dosis:400,500,700,800,600,300,200' rel='stylesheet' type='text/css'>
+    <link href="assets/css/JiSlider.css" rel="stylesheet">
+    <link href="assets/kendoui/styles/kendo.common.min.css" rel="stylesheet">
+    <link href="assets/kendoui/styles/kendo.rtl.min.css" rel="stylesheet">
+    <link href="assets/kendoui/styles/kendo.default.min.css" rel="stylesheet">
+    <link href="assets/kendoui/styles/kendo.default.mobile.min.css" rel="stylesheet">
+
+    <script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-scrolltofixed.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.isotope.js"></script>
+    <script type="text/javascript" src="assets/js/wow.js"></script>
+    <script type="text/javascript" src="assets/js/classie.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="assets/js/JiSlider.js"></script>
+    <script type="text/javascript" src="assets/kendoui/js/jszip.min.js"></script>
+    <script type="text/javascript" src="assets/kendoui/js/kendo.all.min.js"></script>
+    <base href="/">
 </head>
-<body>
-  <app-root></app-root>
+
+<body style="background:#F6F9FF;">
+    <app-root></app-root>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            setDatepicker();
+            var modalDatepicker = $("#selectedDates").data("kendoDatePicker");
+            $("#btnModal").click(function () {
+                setDatepicker();
+                modalDatepicker.open();
+            });
+            function toggleIcon(e) {
+                $(e.target)
+                    .prev('.panel-heading')
+                    .find(".fa")
+                    .toggleClass('fa-angle-down fa-angle-up');
+            }
+            $('.panel-group').on('hidden.bs.collapse', toggleIcon);
+            $('.panel-group').on('shown.bs.collapse', toggleIcon);
+
+            $("#scheduledEndDate").attr("disabled", true);
+        });
+        function onClickTest() {
+            $('#myTab li:first-child a').tab('show');
+            var productCount = $('#productCount').text();
+            if ( productCount > 0) {
+                for (i = 0; i < productCount; i++) {
+                    var testElement =document.getElementById('JiSlider' + i);
+                    if(!testElement.classList.contains('ff'))
+                        $('#JiSlider' + i).JiSlider().addClass('ff');
+                }
+                $('#testClickCount').text('1');
+            }
+        };
+
+        function setDatepicker() {
+            var disabledDays = new Array();
+            blockedDatesList = $("#blockedDates").html();
+            if (blockedDatesList != "" && blockedDatesList != undefined) {
+                result = blockedDatesList.split(",")
+                var dateArray = new Array();
+                for (var i = 0; i < result.length; i++) {
+                    dateArray.push(new Date(result[i]));
+                }
+                disabledDays = dateArray;
+            }
+            $("#textButton").kendoButton();
+            function startChange() {
+                var startDate = start.value(),
+                    endDate = end.value();
+                if (startDate) {
+                    startDate = new Date(startDate);
+                    startDate.setDate(startDate.getDate());
+                    end.min(startDate);
+                    end.enable();
+                } else if (endDate) {
+                    start.max(new Date(endDate));
+                } else {
+                    endDate = new Date();
+                    start.max(endDate);
+                    end.min(endDate);
+                }
+            }
+
+            function endChange() {
+                var endDate = end.value(),
+                    startDate = start.value();
+
+                if (endDate) {
+                    endDate = new Date(endDate);
+                    endDate.setDate(endDate.getDate());
+                    start.max(endDate);
+                } else if (startDate) {
+                    end.min(new Date(startDate));
+                } else {
+                    endDate = new Date();
+                    start.max(endDate);
+                    end.min(endDate);
+                }
+            }
+            function setSelectedDates() {
+                var frm = new Date(start.value());
+                selectedDates.dates = frm;
+                alert(frm);
+            }
+            var start = $("#scheduledStartDate").kendoDatePicker({
+                min: new Date(),
+                change: startChange,
+                dates: disabledDays,
+                disableDates: function (date) {
+                    var dates = $("#scheduledStartDate").data("kendoDatePicker").options.dates;
+                    if (date && compareDates(date, dates)) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+            }).data("kendoDatePicker");
+            var end = $("#scheduledEndDate").kendoDatePicker({
+                min: new Date(),
+                change: endChange,
+                dates: disabledDays,
+                disableDates: function (date) {
+                    var dates = $("#scheduledEndDate").data("kendoDatePicker").options.dates;
+                    if (date && compareDates(date, dates)) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+            }).data("kendoDatePicker");
+            if (start != undefined)
+                start.max(end.value());
+            if (end != undefined)
+                end.min(start.value());
+
+            var selectedDates = $("#selectedDates").kendoDatePicker({
+                dates: disabledDays,
+                disableDates: function (date) {
+                    var dates = $("#selectedDates").data("kendoDatePicker").options.dates;
+                    if (date && compareDates(date, dates)) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+            });
+
+        }
+        function compareDates(date, dates) {
+            for (var i = 0; i < dates.length; i++) {
+                if (dates[i].getDate() == date.getDate() &&
+                    dates[i].getMonth() == date.getMonth() &&
+                    dates[i].getYear() == date.getYear()) {
+                    return true
+                }
+            }
+        }       
+    </script>
 </body>
+
 </html>

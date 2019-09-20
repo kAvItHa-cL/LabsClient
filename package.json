@@ -5,10 +5,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:es": "ng serve --aot --i18nFile=src/locale/resources.es.xlf --i18nFormat=xlf --locale es",
+    "start:en": "ng serve --aot --i18nFile=src/locale/resources.en.xlf --i18nFormat=xlf --locale en",
+    "start:fr": "ng serve --aot --i18nFile=src/locale/resources.fr.xlf --i18nFormat=xlf --locale fr",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "i18n": "ng xi18n --output-path src/locale"
   },
   "private": true,
   "dependencies": {
@@ -18,10 +22,21 @@
     "@angular/core": "^5.2.0",
     "@angular/forms": "^5.2.0",
     "@angular/http": "^5.2.0",
+    "@angular/material": "^6.3.0",
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "@progress/kendo-angular-buttons": "^4.1.1",
+    "@progress/kendo-angular-l10n": "^1.2.0",
+    "@progress/kendo-theme-default": "^2.53.2",
+    "@progress/kendo-ui": "^2018.2.613",
+    "angular-flash-message": "^3.4.0",
+    "angular2-flash-message": "^1.0.2",
+    "bootstrap": "^4.1.1",
     "core-js": "^2.4.1",
+    "i18n": "^0.8.3",
+    "jquery": "^3.3.1",
+    "ngx-flash-messages": "^1.0.4",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },
