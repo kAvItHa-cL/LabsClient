@@ -35,7 +35,7 @@
     "bootstrap": "^4.1.1",
     "core-js": "^2.4.1",
     "i18n": "^0.8.3",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "ngx-flash-messages": "^1.0.4",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
